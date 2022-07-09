@@ -8,7 +8,7 @@ namespace RockScissorsPaperSimulation
 {
     public interface IPlayer
     {
-        PlayStatus LastPlay { get; set; }   
+        PlayStatus LastPlay { get; }   
         PlayStatus Play();
     }
     public enum PlayStatus

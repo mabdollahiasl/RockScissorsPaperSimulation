@@ -8,7 +8,7 @@ namespace RockScissorsPaperSimulation
 {
     public class PlayerOnRock : IPlayer
     {
-        public PlayStatus LastPlay { get; set; }
+        public PlayStatus LastPlay { get; private set; }
 
 
         public PlayStatus Play()

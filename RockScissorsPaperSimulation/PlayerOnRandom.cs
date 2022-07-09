@@ -17,7 +17,7 @@ namespace RockScissorsPaperSimulation
             _indexToPlaystatus = new PlayStatus[] { PlayStatus.Paper, PlayStatus.Rock, PlayStatus.Scissor };
         }
 
-        public PlayStatus LastPlay { get; set; }
+        public PlayStatus LastPlay { get; private set; }
 
       
 
