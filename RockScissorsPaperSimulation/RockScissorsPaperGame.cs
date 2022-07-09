@@ -73,7 +73,7 @@ namespace RockScissorsPaperSimulation
                 }
                 _logger.Log($"A:{PlayerA.LastPlay}\tB:{PlayerB.LastPlay}, {winnerName} won!");
             }
-            _logger.Log($"A won in {aWonCount} and B won in {bWonCount}");
+            _logger.Log($"Summery: A won in {aWonCount} and B won in {bWonCount}");
         }
     }
 }
