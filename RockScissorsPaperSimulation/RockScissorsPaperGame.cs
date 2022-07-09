@@ -24,21 +24,17 @@ namespace RockScissorsPaperSimulation
         {
             get
             {
-                if ((PlayerA.LastPlay | PlayerB.LastPlay) == PlayStatus.PaperRock)
+                PlayStatus lastPlay = (PlayerA.LastPlay | PlayerB.LastPlay);
+                switch (lastPlay)
                 {
-                    return PlayerA.LastPlay == PlayStatus.Paper ? PlayerA : PlayerB;
-                }
-                else if ((PlayerA.LastPlay | PlayerB.LastPlay) == PlayStatus.PaperScissor)
-                {
-                    return PlayerA.LastPlay == PlayStatus.Scissor ? PlayerA : PlayerB;
-                }
-                else if ((PlayerA.LastPlay | PlayerB.LastPlay) == PlayStatus.ScissorRock)
-                {
-                    return PlayerA.LastPlay == PlayStatus.Rock ? PlayerA : PlayerB;
-                }
-                else
-                {
-                    return null;
+                    case PlayStatus.PaperRock:
+                        return PlayerA.LastPlay == PlayStatus.Paper ? PlayerA : PlayerB;
+                    case PlayStatus.PaperScissor:
+                        return PlayerA.LastPlay == PlayStatus.Scissor ? PlayerA : PlayerB;
+                    case PlayStatus.ScissorRock:
+                        return PlayerA.LastPlay == PlayStatus.Rock ? PlayerA : PlayerB;
+                    default:
+                        return null;
                 }
             }
         }
